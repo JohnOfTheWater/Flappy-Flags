@@ -5,8 +5,13 @@ var f2 = {country: 'Canada', flag:'ca'};
 var f3 = {country: 'Russia', flag:'ru'};
 var f4 = {country: 'Italy', flag:'it'};
 var f5 = {country: 'France', flag:'fr'};
+var f6 = {country: 'Botswana', flag:'bw'};
+var f7 = {country: 'Chad', flag:'cd'};
+var f8 = {country: 'Cameron', flag:'cm'};
+var f9 = {country: 'Congo', flag:'dz'};
+var f10 = {country: 'Eritrea', flag:'er'};
 
-global.flags = [f1, f2, f3, f4, f5];
+global.flags = [f1, f2, f3, f4, f5, f6, f7, f8, f9, f10];
 
 
 

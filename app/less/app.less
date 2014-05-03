@@ -1,18 +1,54 @@
 @bg-color: #99cc00;
 
 body{
-  background-color: @bg-color;
+  height: 955px;
+  //background-color: #C30;
+  //border: medium solid #FF0;
+  //padding-top: 5px; padding-right: 7px; padding-bottom: 7px; padding-left: 7px;
+  //color: #FFF;
+  //text-align: center;
+  //animation-name: Cycle;
+  //animation-duration:6s;
+  //animation-direction:alternate;
+  //animation-iteration-count:infinite;
+
+  //-webkit-animation-name: homeCycle;
+  //-webkit-animation-duration: 6s;
+  //-webkit-animation-direction: normal;
+  //-webkit-animation-iteration-count: infinite;
+
+}
+
+@-webkit-keyframes homeCycle
+{
+  //-webkit-animation-timing-function: ease;
+  0%,100% {background: linear-gradient(#F7ECEC, #162CCE);}
+  25% {background: linear-gradient(#F7ECEC, #16CE3B);}
+  50% {background: linear-gradient(#F7ECEC, #CE1642);}
+  75% {background: linear-gradient(#F7ECEC, #E7D719);}
+  //0%,100% {background-color:#006;}
+  //25% {background-color:#060;}
+  //50% {background-color:#CC3200;}
+  //75% {background-color:#603;}
 }
 
 #displayFlags {
+  background: linear-gradient(blue, gold) !important;
+  //background: linear-gradient(to top, white, transparent);
   width: 100px;
-  //border: 1px solid white;
   float: left;
+  -webkit-transition: width 2s, background 2s, -webkit-transform 2s;
+}
+
+#displayFlags:hover {
+background: linear-gradient(blue, green);
+width:200px;
+-webkit-transform:rotate(180deg);
 }
 
 #displayCountries {
-  width: 100px;
-  //border: 1px solid white;
+width: 100px;
+//border: 1px solid white;
   float: left;
 }
 
@@ -38,11 +74,26 @@ body{
   background-color: black;
   color: white;
   padding: 15px 0px 0px 15px;
-  width: 100px; height: 100px;
+  max-width: 170px;
+  height: 100px;
   font-size: 60px;
   position: relative;
-  top: -120px; left: 435px;
+  top: -120px;
+  left: 535px;
   border: 2px solid grey;
+
+  -webkit-animation-name: stuff;
+  -webkit-animation-duration:6s;
+  -webkit-animation-direction:normal;
+  -webkit-animation-iteration-count:infinite;
+}
+
+@-webkit-keyframes stuff
+{
+  0% {background: linear-gradient(#F7ECEC, #16CE3B);}
+  25% {background-color:#060;}
+  50% {background-color:#CC3200;}
+  75% {background-color:#603;}
 }
 
 #score {
@@ -60,4 +111,48 @@ body{
 #finalScore {
   text-decoration: underline;
   font-size: 40px;
+}
+
+
+#slideshow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  //box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  top: 0px;
+  left: 0px;
+}
+
+#slideshow > div {
+  z-index: -1;
+position: absolute;
+top: 0px;
+left: 0px;
+right: 0px;
+bottom: 0px;
+}
+
+#first{
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(white, green);
+//background: linear-gradient(to bottom right, red, rgba(255,0,0,0));
+}
+
+#second{
+  width: 100%;
+  height: 100%;
+background: linear-gradient(white, red);
+}
+
+#third{
+  width: 100%;
+  height: 100%;
+background: linear-gradient(white, yellow);
+}
+
+#quattro{
+  width: 100%;
+  height: 100%;
+background: linear-gradient(white, blue);
 }

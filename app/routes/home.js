@@ -3,7 +3,7 @@
 var _ = require('lodash');
 
 exports.index = function(req, res){
-  var countries = _.sample(global.flags, 5);
+  var countries = _.sample(global.flags, 7);
   var flags = _.shuffle(countries);
   res.render('home/index', {flags:flags, countries:countries, title: 'Flappy Flags'});
 };

@@ -7,6 +7,7 @@
   function initialize(){
     $(document).foundation();
     $('#score').hide();
+    $('#slideshow > div:gt(0)').hide();
     $('#displayFlags').on('click', '.flag', setFlag);
     $('#displayCountries').on('click', '.country', setCountry);
     $('#match').click(sendMatch);
@@ -16,7 +17,7 @@
   var flag = '';
   var country = '';
   var counter = 0;
-  var i = 60;
+  var i = 1160;
   var timer = setInterval(countDown, 1000);
   var attempts = 0;
 
@@ -43,7 +44,7 @@
       $('.flag[val="'+flag+'"]').addClass('thumbUp').removeClass('flag').removeClass('selected');
       $('.country[val="'+country+'"]').addClass('thumbUp').removeClass('country').removeClass('selected').text('');
       counter += 1;
-      if(counter === 5 ){
+      if(counter === 7 ){
         //$('body').empty();
         alert('YOU WON!!!');
         $('#score').fadeIn();
@@ -69,6 +70,15 @@
       $('#timer').text(i);
     }
   }
+
+  setInterval(function() {
+    $('#slideshow > div:first')
+      .fadeOut(1700)
+      .next()
+      .fadeIn(1700)
+      .end()
+      .appendTo('#slideshow');
+  },  1700);
 
 })();
 
