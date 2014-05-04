@@ -82,18 +82,26 @@ width: 100px;
   left: 535px;
   border: 2px solid grey;
 
-  -webkit-animation-name: stuff;
-  -webkit-animation-duration:6s;
-  -webkit-animation-direction:normal;
-  -webkit-animation-iteration-count:infinite;
+  //-webkit-animation-name: stuff;
+  //-webkit-animation-duration:6s;
+  //-webkit-animation-direction:normal;
+  //-webkit-animation-iteration-count:infinite;
+  -webkit-animation: stuff 0.7s infinite alternate;
 }
 
 @-webkit-keyframes stuff
 {
-  0% {background: linear-gradient(#F7ECEC, #16CE3B);}
-  25% {background-color:#060;}
-  50% {background-color:#CC3200;}
-  75% {background-color:#603;}
+  0% {background: linear-gradient(#F7ECEC, #E6F5EB);}
+  10% {background: linear-gradient(#F7ECEC, #CCEBD6);}
+  20% {background: linear-gradient(#F7ECEC, #B2E0C2);}
+  30% {background: linear-gradient(#F7ECEC, #99D6AD);}
+  40% {background: linear-gradient(#F7ECEC, #80CC99);}
+  50% {background: linear-gradient(#F7ECEC, #66C285);}
+  60% {background: linear-gradient(#F7ECEC, #4DB870);}
+  70% {background: linear-gradient(#F7ECEC, #33AD5C);}
+  80% {background: linear-gradient(#F7ECEC, #19A347);}
+  90% {background: linear-gradient(#F7ECEC, #009933);}
+  100% {background: linear-gradient(#F7ECEC, #009933);}
 }
 
 #score {
@@ -115,6 +123,7 @@ width: 100px;
 
 
 #slideshow {
+  z-index: -1;
   position: absolute;
   width: 100%;
   height: 100%;
